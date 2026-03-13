@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TalenVic | HR Training Institute</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'DM Sans',sans-serif;
+}
+
+html,body{
+overflow-x:hidden;
+}
+
+body{
+background:#f3fbf7;
+color:#333;
+}
+
+/* HEADER */
+
+header{
+position:absolute;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+z-index:10;
+}
+
+.logo{
+height:55px;
+}
+
+/* NAV */
+
+nav ul{
+display:flex;
+list-style:none;
+gap:34px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+font-size:16px;
+transition:.3s;
+}
+
+nav a:hover,
+nav a.active{
+color:#4EB978;
+}
+
+/* ENQUIRY BUTTON */
+
+.enquiry{
+background:#4EB978;
+color:#fff;
+padding:10px 22px;
+border-radius:8px;
+transition:.3s;
+}
+
+.enquiry:hover{
+background:#3da86a;
+color:#fff;
+}
+
+/* HAMBURGER */
+
+.hamburger{
+width:28px;
+height:22px;
+display:none;
+flex-direction:column;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.hamburger span{
+height:3px;
+background:#333;
+border-radius:3px;
+transition:.3s;
+}
+
+.hamburger.active span:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+
+.hamburger.active span:nth-child(2){
+opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:120px 20px 60px 20px;
+background:linear-gradient(135deg,#e9f9f1,#f6fffb);
+}
+
+.hero-container{
+max-width:1300px;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
+
+.hero-left{
+max-width:620px;
+}
+
+.tagline{
+color:#4EB978;
+font-weight:700;
+font-size:13px;
+margin-bottom:10px;
+letter-spacing:1px;
+}
+
+.hero h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero h1 span{
+color:#4EB978;
+}
+
+.hero p{
+font-size:20px;
+color:#555;
+margin-bottom:28px;
+}
+
+.buttons{
+display:flex;
+gap:16px;
+margin-bottom:25px;
+}
+
+.btn{
+padding:15px 30px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+}
+
+.primary{
+background:#4EB978;
+color:#fff;
+}
+
+.secondary{
+border:2px solid #4EB978;
+color:#4EB978;
+}
+
+.secondary:hover{
+background:#4EB978;
+color:#fff;
+}
+/* HERO IMAGE */
+
+.hero-right{
+flex:1;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+}
+
+.hero-right picture img{
+width:100%;
+max-width:600px;
+position:relative;
+z-index:3;
+}
+
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.popup-content{
+background:#fff;
+padding:35px;
+border-radius:12px;
+width:90%;
+max-width:400px;
+position:relative;
+animation:popup .3s ease;
+}
+
+.popup-content h2{
+margin-bottom:20px;
+}
+
+.popup-content input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.download-btn{
+width:100%;
+padding:14px;
+background:#4EB978;
+border:none;
+color:#fff;
+font-weight:600;
+border-radius:8px;
+cursor:pointer;
+}
+
+.download-btn:hover{
+background:#3da86a;
+}
+
+.close{
+position:absolute;
+right:15px;
+top:10px;
+font-size:22px;
+cursor:pointer;
+}
+
+@keyframes popup{
+from{transform:scale(.8);opacity:0;}
+to{transform:scale(1);opacity:1;}
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+padding:18px 20px;
+}
+
+nav{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:linear-gradient(135deg,#e9f9f1,#f6fffb);
+}
+
+nav ul{
+flex-direction:column;
+padding:25px;
+gap:18px;
+}
+
+.hamburger{
+display:flex;
+}
+
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+.hero-right picture img{
+max-width:300px;
+transform:scale(1.15);
+}
+
+
+}
+
+.show{
+display:block;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<div class="hamburger" id="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<nav id="nav">
+<ul>
+<li><a class="active" href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Courses</a></li>
+<li><a href="#">Why Us</a></li>
+<li><a href="#">Blog</a></li>
+<li><a href="#">Contact</a></li>
+<li><a class="enquiry" href="#">Enquiry</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-left">
+
+<div class="tagline">KERALA'S NO 1 HR TRAINING INSTITUTE</div>
+
+<h1>BUILD SUCCESSFUL <span>CAREER</span> IN HUMAN RESOURCES</h1>
+
+<p>
+Get industry-ready HR training with certifications and placement support.
+Learn practical HR skills required to succeed in today's job market.
+</p>
+
+<div class="buttons">
+
+<a href="#" class="btn primary">Explore Courses</a>
+
+<a href="#" class="btn secondary" onclick="openPopup()">Download Brochure</a>
+
+</div>
+
+<div class="trust">
+Trusted by 1000+ Students • Rated 4.8/5 by Learners • 100% Placement Support
+</div>
+
+</div>
+
+<div class="hero-right">
+<picture>
+<source srcset="girl1.png" media="(max-width:768px)">
+<img src="girl.png">
+</picture>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- POPUP -->
+
+<div class="popup" id="popup">
+
+<div class="popup-content">
+
+<span class="close" onclick="closePopup()">×</span>
+
+<h2>Download Brochure</h2>
+
+<form onsubmit="downloadBrochure(event)">
+
+<input type="text" placeholder="Full Name" required>
+<input type="email" placeholder="Email Address" required>
+<input type="tel" placeholder="Phone Number" required>
+
+<button class="download-btn">
+Download Brochure
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+document.getElementById("nav").classList.toggle("show");
+document.getElementById("hamburger").classList.toggle("active");
+}
+
+function openPopup(){
+document.getElementById("popup").style.display="flex";
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+function downloadBrochure(e){
+e.preventDefault();
+window.location.href="brochure.pdf";
+closePopup();
+}
+
+</script>
+
+</body>
+</html>
